@@ -137,6 +137,7 @@ public class Medicine : ActiveRecord
         Console.Write("Czy lek jest na receptę? (pozostaw puste dla nie, lub wpisz \"tak\")");
         bool withPrescription = Boolean.Parse(Console.ReadLine());
         medicine.Add(new Medicine(ID, name, manufacturer, price,amount,withPrescription));
+
         Open();
 
         SqlTransaction transaction = connection.BeginTransaction();
